@@ -3,7 +3,7 @@
 ## install
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/jansedivy/dotfiles/master/scripts/run | sh
+curl -fsSL https://raw.githubusercontent.com/patrikholcak/dotfiles/master/scripts/run | sh
 ```
 
 ## Thanks

@@ -1,0 +1,30 @@
+[user]
+  name = AUTHORNAME
+  email = AUTHOREMAIL
+[alias]
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  promote = !$ZSH/bin/git-promote
+  rank-contributers = !$ZSH/bin/git-rank-contributers
+  count   = !git shortlog -sn
+  aa      = add --all
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  ui = true
+[core]
+  excludesfile = ~/.gitignore
+  editor = subl
+  ignorecase = false
+[apply]
+  whitespace = nowarn
+[difftool]
+  prompt = false
+[help]
+  autocorrect = 1
+[push]
+  default = simple
+[pull]
+  rebase = true
+[diff]
+  algorithm = patience

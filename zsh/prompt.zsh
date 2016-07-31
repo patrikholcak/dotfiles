@@ -33,18 +33,19 @@ ahead() {
 }
 
 need_push() {
+  dirty=$(unpushed)
   ah=$(ahead)
+  st=""
 
-  if [[ $(unpushed) == "" ]]
-  then
-    if [[ $ah != "0" ]]; then
-      echo "%{$fg[cyan]%}[%{$ah%}]%{$reset_color%}"
-    else
-      echo ""
-    fi
-  else
-    echo "%{$fg[cyan]%}*%{$reset_color%}"
+  if [[ $ah != "0" ]]; then
+    st="[$ah]"
   fi
+
+  if [[ $dirty != "" ]]; then
+    st="$st*"
+  fi
+
+  echo "%{$fg[cyan]%}%{$st%}%{$reset_color%}"
 }
 
 directory_name() {

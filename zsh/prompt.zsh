@@ -37,7 +37,7 @@ need_push() {
   ah=$(ahead)
   st=""
 
-  if [[ $ah != "0" ]]; then
+  if [[ $ah != "0" && $ah != "" ]]; then
     st="[$ah]"
   fi
 

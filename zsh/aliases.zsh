@@ -1,7 +1,7 @@
 # Command Aliasses
 alias ll='ls -lGa'
 alias l='git lg'
-alias d='git diff'
+alias d='git diff --word-diff'
 alias s='git status'
 alias p='show_status -p'
 alias server='python -m SimpleHTTPServer'

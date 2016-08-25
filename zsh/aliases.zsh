@@ -1,4 +1,5 @@
 # Command Aliasses
+alias git=hub
 alias ll='ls -lGa'
 alias l='git lg'
 alias d='git diff --word-diff'

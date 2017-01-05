@@ -11,9 +11,9 @@ alias q='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/
 
 # Folder aliasses
 alias dev='cd ~/dev/'
-alias lab='cd ~/dev/_labs/'
+alias lab='dev'
 alias cdd='cd ..'
 
 # Alias fuck command
-eval $(thefuck --alias)
+alias fuck='TF_CMD=$(TF_ALIAS=fuck PYTHONIOENCODING=utf-8 TF_SHELL_ALIASES=$(alias) thefuck $(fc -ln -1 | tail -n 1)) && eval $TF_CMD && print -s $TF_CMD'
 export THEFUCK_REQUIRE_CONFIRMATION='false'

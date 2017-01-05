@@ -5,9 +5,8 @@ export ZSH=$HOME/.dotfiles
 typeset -U config_files
 config_files=($(find $ZSH/**/*.zsh | grep -v /vim/ | grep -v "/lib/*/"))
 
-# initialize autocomplete here, otherwise functions won't be loaded
-autoload -U compinit
-compinit
+# cwd
+chpwd () {print -Pn "\e]2; %~/ \a"}
 
 # load the path files
 for file in ${(M)config_files:#*/path.zsh}

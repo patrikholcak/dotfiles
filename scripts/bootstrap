@@ -140,3 +140,4 @@ install_dotfiles () {
 setup_gitconfig
 install_dotfiles
 osx/setup.sh
+system/install.sh

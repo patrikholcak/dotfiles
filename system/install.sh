@@ -43,13 +43,14 @@ install_package "Installing hub" brew install hub
 
 install_package "Installing flow" npm install flow-bin -g
 
-install_package "Homebrew Cask" brew install caskroom/cask/brew-cask
+install_package "Homebrew Cask" brew tap caskroom/cask
+install_package "Homebrew Cask" brew tap caskroom/versions
 
-install_package "Installing app Sublime Text 3" brew cask install sublime-text3 2> /dev/null
+install_package "Installing app Sublime Text 3" brew cask install sublime-text 2> /dev/null
 install_package "Installing app Chrome" brew cask install google-chrome 2> /dev/null
 install_package "Installing app Chrome Canary" brew cask install google-chrome-canary 2> /dev/null
 install_package "Installing app Firefox" brew cask install firefox 2> /dev/null
-install_package "Installing app Firefox Nightly" brew cask install firefox-nightly 2> /dev/null
+install_package "Installing app Firefox Nightly" brew cask install firefoxnightly 2> /dev/null
 
 install_package "Installing app Audacity" brew cask install audacity 2> /dev/null
 install_package "Installing app Battle.net" brew cask install battle-net 2> /dev/null

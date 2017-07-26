@@ -139,5 +139,12 @@ install_dotfiles () {
 
 setup_gitconfig
 install_dotfiles
-osx/setup.sh
-system/install.sh
+init/setup-env-vars.sh
+
+sudo chown root:wheel $ZSH/bin/sudo && sudo chmod 4755 $ZSH/bin/sudo
+
+if [[ $(uname) == "Darwin" ]]; then
+  init/setup.sh
+  init/install.sh
+  init/copy-configs.sh
+fi

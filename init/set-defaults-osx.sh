@@ -110,3 +110,5 @@ defaults write com.apple.dock tilesize -int 64
 
 # Show indicator lights for open applications in the Dock
 defaults write com.apple.dock show-process-indicators -bool true
+
+exit 0

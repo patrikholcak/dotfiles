@@ -12,6 +12,7 @@ alias i='react-native run-ios'
 alias q='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'  # lock screen
 alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
 alias cdd='cd ..'
+alias virtual='VBoxHeadless -s virtual'
 
 # Folder aliasses
 alias dev='cd ~/dev/'

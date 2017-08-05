@@ -32,7 +32,10 @@ install_package() {
   fi
 }
 
-  printf "[ \033[00;33mSystem Apps\033[0m ]\n"
+printf "[ \033[00;33mSystem\033[0m ]\n"
+install_package "Setting up defaults\n" osx/set-defaults.sh
+
+printf "[ \033[00;33mSystem Apps\033[0m ]\n"
 install_package "Homebrew Update" brew update
 install_package "Homebrew Upgrade" brew upgrade
 
@@ -54,6 +57,7 @@ install_package "Installing app Chrome" brew cask install google-chrome 2> /dev/
 install_package "Installing app Chrome Canary" brew cask install google-chrome-canary 2> /dev/null
 install_package "Installing app Firefox" brew cask install firefox 2> /dev/null
 install_package "Installing app Firefox Nightly" brew cask install firefoxnightly 2> /dev/null
+install_package "Installing app Opera" brew cask install opera 2> /dev/null
 
 install_package "Installing app 1Password" brew cask install 1password 2> /dev/null
 install_package "Installing app AppCleaner" brew cask install appcleaner 2> /dev/null

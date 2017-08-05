@@ -1,5 +1,5 @@
 {
-	"color_scheme": "Packages/Color Scheme - Default/Monokai Bright.tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Monokai Bright (SL).tmTheme",
 	"detect_indentation": false,
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,

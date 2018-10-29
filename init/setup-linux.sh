@@ -43,7 +43,7 @@ install_package "Apt Upgrade" sudo apt-get upgrade -y
 install_package "Installing Zsh" sudo apt-get install zsh -y
 install_package "Installing Python 3" sudo apt-get install python3 -y
 
-install_package "Adding latest Node ppa" curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+install_package "Adding latest Node ppa" curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -
 install_package "Installing Node" sudo apt-get install -y nodejs
 install_package "Aliasing Node" echo "alias node=nodejs" >> ~/.dotfiles/zsh/aliases.zsh
 

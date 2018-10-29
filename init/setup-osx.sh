@@ -53,13 +53,13 @@ install_package "Homebrew Cask" brew tap caskroom/versions
 # Install required packages
 install_package "Installing app Chrome Canary" brew cask install google-chrome-canary 2> /dev/null
 install_package "Installing app VS Code" brew cask install visual-studio-code 2> /dev/null
-install_package "Installing app 1Password" brew cask install 1password 2> /dev/null
+install_package "Installing app 1Password" brew cask install 1password-beta 2> /dev/null
 install_package "Installing app Slack" brew cask install slack-beta 2> /dev/null
 install_package "Installing app Docker" brew cask install docker 2> /dev/null
 install_package "Installing app Sketch" brew cask install sketch 2> /dev/null
 install_package "Installing app VirtualBox" brew cask install virtualbox 2> /dev/null
+install_package "Installing app Trailer" brew cask install trailer 2> /dev/null
 
-install_package "Installing app betterzipql" brew cask install betterzipql 2> /dev/null
 install_package "Installing app qlstephen" brew cask install qlstephen 2> /dev/null
 install_package "Installing app quicklook-json" brew cask install quicklook-json 2> /dev/null
 

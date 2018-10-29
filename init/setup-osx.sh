@@ -43,6 +43,7 @@ install_package "Installing Zsh" brew install zsh
 install_package "Installing Node" brew install node
 install_package "Installing Python 3" brew install python3
 install_package "Installing hub" brew install hub
+install_package "Installing yarn" brew install yarn
 install_package "Installing MAS" brew install mas
 
 install_package "Installing flow" npm install flow-bin -g

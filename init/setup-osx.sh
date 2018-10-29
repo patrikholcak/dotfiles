@@ -55,6 +55,7 @@ install_package "Homebrew Cask" brew tap caskroom/versions
 install_package "Installing app Chrome Canary" brew cask install google-chrome-canary 2> /dev/null
 install_package "Installing app VS Code" brew cask install visual-studio-code 2> /dev/null
 install_package "Installing app 1Password" brew cask install 1password-beta 2> /dev/null
+install_package "Installing app Heroku" brew install heroku/brew/heroku 2> /dev/null
 install_package "Installing app Slack" brew cask install slack-beta 2> /dev/null
 install_package "Installing app Docker" brew cask install docker 2> /dev/null
 install_package "Installing app Sketch" brew cask install sketch 2> /dev/null

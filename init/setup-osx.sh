@@ -76,7 +76,6 @@ install_package "Installing app Opera" brew cask install opera 2> /dev/null
 
 # Additional software
 install_package "Installing app CleanMyMac" brew cask install cleanmymac3 2> /dev/null
-install_package "Installing app Audacity" brew cask install audacity 2> /dev/null
 install_package "Installing app Dropbox" brew cask install dropbox 2> /dev/null
 install_package "Installing app ImageOptim" brew cask install imageoptim 2> /dev/null
 install_package "Installing app ImageAlpha" brew cask install imagealpha 2> /dev/null

@@ -76,6 +76,7 @@ install_package "Installing app Firefox" brew cask install firefox 2> /dev/null
 install_package "Installing app Opera" brew cask install opera 2> /dev/null
 
 # Additional software
+install_package "Installing app Caprine" brew cask install caprine 2> /dev/null
 install_package "Installing app CleanMyMac" brew cask install cleanmymac3 2> /dev/null
 install_package "Installing app Dropbox" brew cask install dropbox 2> /dev/null
 install_package "Installing app ImageOptim" brew cask install imageoptim 2> /dev/null

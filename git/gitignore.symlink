@@ -25,3 +25,5 @@ Session.vim
 *.sql
 *.sqlite
 .python-version
+
+.eslintcache

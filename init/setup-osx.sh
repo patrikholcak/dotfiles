@@ -61,6 +61,7 @@ install_package "Installing app Docker" brew cask install docker 2> /dev/null
 install_package "Installing app Sketch" brew cask install sketch 2> /dev/null
 install_package "Installing app VirtualBox" brew cask install virtualbox 2> /dev/null
 install_package "Installing app Trailer" brew cask install trailer 2> /dev/null
+install_package "Installing app Caprine" brew cask install caprine 2> /dev/null
 
 install_package "Installing app qlstephen" brew cask install qlstephen 2> /dev/null
 install_package "Installing app quicklook-json" brew cask install quicklook-json 2> /dev/null

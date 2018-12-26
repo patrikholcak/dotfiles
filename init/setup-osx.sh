@@ -59,7 +59,7 @@ install_package "Installing app Heroku" brew install heroku/brew/heroku 2> /dev/
 install_package "Installing app Slack" brew cask install slack-beta 2> /dev/null
 install_package "Installing app Docker" brew cask install docker 2> /dev/null
 install_package "Installing app Sketch" brew cask install sketch 2> /dev/null
-install_package "Installing app VirtualBox" brew cask install virtualbox 2> /dev/null
+# install_package "Installing app VirtualBox" brew cask install virtualbox 2> /dev/null
 install_package "Installing app Trailer" brew cask install trailer 2> /dev/null
 install_package "Installing app Caprine" brew cask install caprine 2> /dev/null
 
@@ -77,7 +77,6 @@ install_package "Installing app Firefox" brew cask install firefox 2> /dev/null
 install_package "Installing app Opera" brew cask install opera 2> /dev/null
 
 # Additional software
-install_package "Installing app Caprine" brew cask install caprine 2> /dev/null
 install_package "Installing app CleanMyMac" brew cask install cleanmymac3 2> /dev/null
 install_package "Installing app Dropbox" brew cask install dropbox 2> /dev/null
 install_package "Installing app ImageOptim" brew cask install imageoptim 2> /dev/null

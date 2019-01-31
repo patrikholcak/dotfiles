@@ -36,18 +36,18 @@ cp -r configs/Code ~/Library/Application\ Support/
 
 printf "[ \033[00;33mInstalling Extensions\033[0m ]\n"
 
-install_package "monokai.theme-monokai-pro-vscode\n" code --install-extension monokai.theme-monokai-pro-vscode
-install_package "Zignd.html-css-class-completion\n" code --install-extension Zignd.html-css-class-completion
 install_package "angryobject.react-pure-to-class-vscode\n" code --install-extension angryobject.react-pure-to-class-vscode
 install_package "burkeholland.simple-react-snippets\n" code --install-extension burkeholland.simple-react-snippets
 install_package "capaj.vscode-exports-autocomplete\n" code --install-extension capaj.vscode-exports-autocomplete
 install_package "christian-kohler.npm-intellisense\n" code --install-extension christian-kohler.npm-intellisense
 install_package "christian-kohler.path-intellisense\n" code --install-extension christian-kohler.path-intellisense
+install_package "coenraads.bracket-pair-colorizer-2\n" code --install-extension coenraads.bracket-pair-colorizer-2
 install_package "dbaeumer.vscode-eslint\n" code --install-extension dbaeumer.vscode-eslint
 install_package "dzannotti.vscode-babel-coloring\n" code --install-extension dzannotti.vscode-babel-coloring
 install_package "esbenp.prettier-vscode\n" code --install-extension esbenp.prettier-vscode
 install_package "flowtype.flow-for-vscode\n" code --install-extension flowtype.flow-for-vscode
 install_package "formulahendry.auto-rename-tag\n" code --install-extension formulahendry.auto-rename-tag
+install_package "monokai.theme-monokai-pro-vscode\n" code --install-extension monokai.theme-monokai-pro-vscode
 install_package "ms-vscode.sublime-keybindings\n" code --install-extension ms-vscode.sublime-keybindings
 install_package "ms-vscode.typescript-javascript-grammar\n" code --install-extension ms-vscode.typescript-javascript-grammar
 install_package "naumovs.color-highlight\n" code --install-extension naumovs.color-highlight
@@ -59,3 +59,4 @@ install_package "sirtori.indenticator\n" code --install-extension sirtori.indent
 install_package "smockle.xcode-default-theme\n" code --install-extension smockle.xcode-default-theme
 install_package "sysoev.language-stylus\n" code --install-extension sysoev.language-stylus
 install_package "wix.vscode-import-cost\n" code --install-extension wix.vscode-import-cost
+install_package "Zignd.html-css-class-completion\n" code --install-extension Zignd.html-css-class-completion

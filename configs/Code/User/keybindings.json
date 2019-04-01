@@ -19,5 +19,19 @@
     "key": "ctrl+shift+alt+left",
     "command": "-cursorWordStartLeftSelect",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+r",
+    "command": "workbench.action.tasks.runTask"
+  },
+  {
+    "key": "shift+alt+l",
+    "command": "editor.action.selectHighlights",
+    "when": "editorFocus"
+  },
+  {
+    "key": "shift+cmd+l",
+    "command": "editor.action.insertCursorAtEndOfEachLineSelected",
+    "when": "editorTextFocus"
   }
 ]

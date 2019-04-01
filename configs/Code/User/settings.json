@@ -1,5 +1,5 @@
 {
-  // ---------------- General ----------------
+  // = = = = = = = = = = = = = = = =  General = = = = = = = = = = = = = = = =
   "window.openFilesInNewWindow": "off",
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
   "editor.multiCursorModifier": "ctrlCmd",
@@ -13,13 +13,13 @@
   "workbench.editor.closeOnFileDelete": false,
   "explorer.confirmDragAndDrop": false,
 
-  // ---------------- Fonts ----------------
+  // = = = = = = = = = = = = = = = =  Fonts = = = = = = = = = = = = = = = =
   "workbench.fontAliasing": "antialiased",
   "editor.fontFamily": "Operator Mono Lig, Operator Mono, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontSize": 13,
-  "editor.fontLigatures": true,
+  "editor.fontLigatures": false,
 
-  // ---------------- Editor: General ----------------
+  // = = = = = = = = = = = = = = = =  Editor: General = = = = = = = = = = = = = = = =
   "editor.tabSize": 2,
   "editor.renderWhitespace": "all",
   "editor.renderControlCharacters": true,
@@ -28,6 +28,7 @@
   "editor.showFoldingControls": "always",
   "editor.snippetSuggestions": "top",
   "editor.detectIndentation": false,
+  "editor.suggestSelection": "first",
 
   "files.exclude": {
     "**/.git": true,
@@ -38,28 +39,42 @@
     "**/.next": true
   },
 
-  // ---------------- Editor: Formatting ----------------
+  "files.associations": {
+    "*.js": "javascriptreact",
+    "*.css": "postcss"
+  },
+
+  // = = = = = = = = = = = = = = = =  Editor: Formatting = = = = = = = = = = = = = = = =
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "editor.formatOnPaste": false,
-  "editor.formatOnSave": false,
+
   "html.format.enable": true,
   "html.format.preserveNewLines": true,
 
+  // Autoformatter
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
   "[javascript]": {
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    "editor.formatOnPaste": false
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": false,
+    "editor.formatOnPaste": false
+  },
+  "[typescript]": {
+    "editor.formatOnSave": false,
+    "editor.formatOnPaste": false
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": false,
+    "editor.formatOnPaste": false
   },
 
-  "[json]": {
-    "editor.formatOnPaste": false,
-    "editor.formatOnSave": false
-  },
-
-  // ---------------- Language Specific configs ----------------
+  // = = = = = = = = = = = = = = = =  Language Specific configs = = = = = = = = = = = = = = = =
   "javascript.updateImportsOnFileMove.enabled": "never",
 
-  // ---------------- Extensions ----------------
+  // = = = = = = = = = = = = = = = =  Extensions = = = = = = = = = = = = = = = =
   "flow.useNPMPackagedFlow": true,
 
   "emmet.includeLanguages": {
@@ -69,7 +84,14 @@
   "eslint.autoFixOnSave": true,
   "eslint.alwaysShowStatus": true,
   "eslint.packageManager": "npm",
+  "eslint.validate": [
+    { "language": "javascript", "autoFix": true },
+    { "language": "javascriptreact", "autoFix": true },
+    { "language": "typescript", "autoFix": true },
+    { "language": "typescriptreact", "autoFix": true }
+  ],
 
-  "bracket-pair-colorizer-2.showBracketsInGutter": true,
-  "bracket-pair-colorizer-2.highlightActiveScope": true
+  // "bracket-pair-colorizer-2.showBracketsInGutter": true,
+  // "bracket-pair-colorizer-2.highlightActiveScope": true,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }

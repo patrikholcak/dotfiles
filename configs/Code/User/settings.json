@@ -17,7 +17,7 @@
   "workbench.fontAliasing": "antialiased",
   "editor.fontFamily": "Operator Mono Lig, Operator Mono, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontSize": 13,
-  "editor.fontLigatures": false,
+  "editor.fontLigatures": true,
 
   // = = = = = = = = = = = = = = = =  Editor: General = = = = = = = = = = = = = = = =
   "editor.tabSize": 2,

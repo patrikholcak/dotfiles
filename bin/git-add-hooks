@@ -1,0 +1,5 @@
+base=$(git rev-parse --show-toplevel)
+
+chmod -R +x "$ZSH/git/hooks"
+
+ln -s $ZSH/git/hooks/* "$base/.git/hooks"

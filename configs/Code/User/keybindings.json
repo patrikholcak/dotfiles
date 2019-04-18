@@ -1,37 +1,66 @@
 // Place your key bindings in this file to overwrite the defaults
 [
-  {
-    "key": "ctrl+alt+right",
-    "command": "-cursorWordEndRight",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+alt+left",
-    "command": "-cursorWordStartLeft",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+shift+alt+right",
-    "command": "-cursorWordEndRightSelect",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+shift+alt+left",
-    "command": "-cursorWordStartLeftSelect",
-    "when": "editorTextFocus"
-  },
+  /**
+   * Editor shortcuts
+   *
+   * |      Shortcut       |              Description              |
+   * | ⌘ + R               | Run task                              |
+   * | ⌘ + ⇧ + L           | Break selection into lines            |
+   * | ⌘ + ⌥ + L           | Select all occurrences                |
+   *
+   */
   {
     "key": "cmd+r",
     "command": "workbench.action.tasks.runTask"
   },
   {
-    "key": "shift+alt+l",
-    "command": "editor.action.selectHighlights",
+    "key": "shift+cmd+l",
+    "command": "-editor.action.selectHighlights",
     "when": "editorFocus"
   },
   {
     "key": "shift+cmd+l",
     "command": "editor.action.insertCursorAtEndOfEachLineSelected",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+l",
+    "command": "editor.action.selectHighlights",
+    "when": "editorFocus"
+  },
+
+  /**
+   * Terminal shortcuts
+   *
+   * |      Shortcut       |              Description              |
+   * | ⌘ + ⌃ + T           | Togle terminal window                 |
+   * | ⌘ + T               | Add new terminal tab                  |
+   * | ⌘ + W               | Kill terminal window                  |
+   * | ⌘ + ⇧ + arrows      | Switch between active terminal window |
+   *
+   */
+  {
+    "key": "ctrl+cmd+t",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "cmd+t",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "shift+cmd+left",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "shift+cmd+right",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
   }
 ]

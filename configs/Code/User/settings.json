@@ -54,6 +54,7 @@
   // Autoformatter
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
     "editor.formatOnSave": false,
     "editor.formatOnPaste": false
@@ -91,7 +92,8 @@
     { "language": "typescriptreact", "autoFix": true }
   ],
 
-  // "bracket-pair-colorizer-2.showBracketsInGutter": true,
-  // "bracket-pair-colorizer-2.highlightActiveScope": true,
+  "bracket-pair-colorizer-2.showBracketsInGutter": true,
+  "bracket-pair-colorizer-2.highlightActiveScope": true,
+
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }

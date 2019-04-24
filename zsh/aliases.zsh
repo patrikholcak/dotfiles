@@ -15,6 +15,7 @@ alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
 alias virtual='VBoxHeadless -s virtual'
 alias cdd='cd ..'
 alias e='code'
+alias er='e -r .'
 alias reload='source ~/.zshrc'
 
 # Folder aliasses

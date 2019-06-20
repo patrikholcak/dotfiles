@@ -8,10 +8,11 @@
   "workbench.colorTheme": "Monokai Classic",
   "workbench.iconTheme": "Monokai Classic Icons",
   "breadcrumbs.enabled": true,
-  "workbench.activityBar.visible": true,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.closeOnFileDelete": false,
   "explorer.confirmDragAndDrop": false,
+  "terminal.integrated.confirmOnExit": true,
+  "git.autofetch": true,
 
   // = = = = = = = = = = = = = = = =  Fonts = = = = = = = = = = = = = = = =
   "workbench.fontAliasing": "antialiased",
@@ -26,9 +27,13 @@
   "editor.rulers": [80, 100],
   "editor.minimap.showSlider": "always",
   "editor.showFoldingControls": "always",
-  "editor.snippetSuggestions": "top",
   "editor.detectIndentation": false,
   "editor.suggestSelection": "first",
+  "editor.suggest.localityBonus": true,
+  "editor.suggest.filteredTypes": {
+    "snippet": false,
+    "text": false
+  },
 
   "files.exclude": {
     "**/.git": true,
@@ -41,7 +46,8 @@
 
   "files.associations": {
     "*.js": "javascriptreact",
-    "*.css": "postcss"
+    "*.css": "postcss",
+    "*.svg": "xml"
   },
 
   // = = = = = = = = = = = = = = = =  Editor: Formatting = = = = = = = = = = = = = = = =
@@ -95,5 +101,5 @@
   "bracket-pair-colorizer-2.showBracketsInGutter": true,
   "bracket-pair-colorizer-2.highlightActiveScope": true,
 
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 }

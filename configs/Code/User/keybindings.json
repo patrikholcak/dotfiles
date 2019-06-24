@@ -33,12 +33,18 @@
    * Terminal shortcuts
    *
    * |      Shortcut       |              Description              |
+   * | ⌘ + K               | Clear terminal output                 |
    * | ⌘ + ⌃ + T           | Togle terminal window                 |
    * | ⌘ + T               | Add new terminal tab                  |
    * | ⌘ + W               | Kill terminal window                  |
    * | ⌘ + ⇧ + arrows      | Switch between active terminal window |
    *
    */
+  {
+    "key": "cmd+k",
+    "command": "workbench.action.terminal.clear",
+    "when": "terminalFocus"
+  },
   {
     "key": "ctrl+cmd+t",
     "command": "workbench.action.terminal.toggleTerminal"

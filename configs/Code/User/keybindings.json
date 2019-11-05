@@ -7,6 +7,10 @@
    * | ⌘ + R               | Run task                              |
    * | ⌘ + ⇧ + L           | Break selection into lines            |
    * | ⌘ + ⌥ + L           | Select all occurrences                |
+   * | ⌘ + ⇧ + E           | Refactor code                         |
+   * | ⌘ + ⇧ + [           | Toggle block comment                  |
+   * | ⌘ + ⇧ + W           | Close all editors                     |
+   * | ⌘ + ⇧ + C           | Close all folders in explorer         |
    *
    */
   {
@@ -27,6 +31,40 @@
     "key": "shift+alt+l",
     "command": "editor.action.selectHighlights",
     "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+cmd+c",
+    "command": "git.checkout"
+  },
+  {
+    "key": "shift+cmd+e",
+    "command": "-workbench.view.explorer"
+  },
+  {
+    "key": "shift+cmd+e",
+    "command": "editor.action.codeAction",
+    "args": { "kind": "refactor.extract", "preferred": true }
+  },
+  {
+    "key": "shift+alt+[BracketLeft]",
+    "command": "editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+w",
+    "command": "-workbench.action.closeWindow"
+  },
+  {
+    "key": "shift+cmd+w",
+    "command": "workbench.action.closeAllEditors"
+  },
+  {
+    "key": "shift+cmd+c",
+    "command": "-workbench.action.terminal.openNativeConsole",
+  },
+  {
+    "key": "shift+cmd+c",
+    "command": "workbench.files.action.collapseExplorerFolders",
   },
 
   /**
@@ -50,10 +88,6 @@
     "command": "workbench.action.terminal.toggleTerminal"
   },
   {
-    "key": "ctrl+cmd+i",
-    "command": "workbench.action.terminal.toggleTerminal"
-  },
-  {
     "key": "cmd+t",
     "command": "workbench.action.terminal.new",
     "when": "terminalFocus"
@@ -73,8 +107,4 @@
     "command": "workbench.action.terminal.kill",
     "when": "terminalFocus"
   },
-  {
-    "key": "ctrl+cmd+c",
-    "command": "git.checkout"
-  }
 ]

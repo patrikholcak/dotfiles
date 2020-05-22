@@ -30,10 +30,7 @@
   "editor.detectIndentation": false,
   "editor.suggestSelection": "first",
   "editor.suggest.localityBonus": true,
-  "editor.suggest.filteredTypes": {
-    // "snippet": false,
-    "text": false
-  },
+  "editor.suggest.showWords": false,
 
   "files.exclude": {
     "**/.git": true,
@@ -58,48 +55,25 @@
   "html.format.preserveNewLines": true,
 
   // Autoformatter
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
   "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
+  // "editor.formatOnPaste": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "[javascript]": {
-    "editor.formatOnSave": false,
-    "editor.formatOnPaste": false
-  },
-  "[javascriptreact]": {
-    "editor.formatOnSave": false,
-    "editor.formatOnPaste": false
-  },
-  "[typescript]": {
-    "editor.formatOnSave": false,
-    "editor.formatOnPaste": false
-  },
-  "[typescriptreact]": {
-    "editor.formatOnSave": false,
-    "editor.formatOnPaste": false
-  },
-
-  // = = = = = = = = = = = = = = = =  Language Specific configs = = = = = = = = = = = = = = = =
-  "javascript.updateImportsOnFileMove.enabled": "never",
 
   // = = = = = = = = = = = = = = = =  Extensions = = = = = = = = = = = = = = = =
-  "flow.useNPMPackagedFlow": true,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
 
-  "eslint.autoFixOnSave": true,
   "eslint.alwaysShowStatus": true,
   "eslint.packageManager": "npm",
-  "eslint.validate": [
-    { "language": "javascript", "autoFix": true },
-    { "language": "javascriptreact", "autoFix": true },
-    { "language": "typescript", "autoFix": true },
-    { "language": "typescriptreact", "autoFix": true }
-  ],
 
   "bracket-pair-colorizer-2.showBracketsInGutter": true,
   "bracket-pair-colorizer-2.highlightActiveScope": true,
-
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.suggest.insertMode": "replace"
 }

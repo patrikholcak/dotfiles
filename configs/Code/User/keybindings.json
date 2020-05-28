@@ -60,11 +60,11 @@
   },
   {
     "key": "shift+cmd+c",
-    "command": "-workbench.action.terminal.openNativeConsole",
+    "command": "-workbench.action.terminal.openNativeConsole"
   },
   {
     "key": "shift+cmd+c",
-    "command": "workbench.files.action.collapseExplorerFolders",
+    "command": "workbench.files.action.collapseExplorerFolders"
   },
 
   /**
@@ -76,6 +76,8 @@
    * | ⌘ + T               | Add new terminal tab                  |
    * | ⌘ + W               | Kill terminal window                  |
    * | ⌘ + ⇧ + arrows      | Switch between active terminal window |
+   * | ⌘ + ⌥ + ⇧ + arrows  | Switch between split terminal panes   |
+   * | ⌥ + \               | Split terminal                        |
    *
    */
   {
@@ -103,8 +105,23 @@
     "when": "terminalFocus"
   },
   {
+    "key": "shift+alt+cmd+left",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "shift+alt+cmd+right",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus"
+  },
+  {
     "key": "cmd+w",
     "command": "workbench.action.terminal.kill",
     "when": "terminalFocus"
   },
+  {
+    "key": "alt+\\",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus"
+  }
 ]

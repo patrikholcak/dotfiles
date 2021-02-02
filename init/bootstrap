@@ -145,8 +145,6 @@ if [[ $(uname) == "Darwin" ]]; then
   init/setup-osx.sh
   init/setup-sublime.sh
   init/setup-vscode.sh
-
-  sudo chown root:wheel ~/.dotfiles/bin/sudo && sudo chmod 4755 ~/.dotfiles/bin/sudo
 fi
 
 if [[ $(uname) == "Linux" ]]; then

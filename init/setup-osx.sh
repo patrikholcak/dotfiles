@@ -50,32 +50,32 @@ install_package "Homebrew Cask" brew tap caskroom/cask
 install_package "Homebrew Cask" brew tap caskroom/versions
 
 # Install required packages
-install_package "Installing app Brave" brew cask install brave-browser 2> /dev/null
-install_package "Installing app VS Code" brew cask install visual-studio-code 2> /dev/null
-install_package "Installing app 1Password" brew cask install 1password-beta 2> /dev/null
-install_package "Installing app Slack" brew cask install slack-beta 2> /dev/null
-install_package "Installing app Sketch" brew cask install sketch 2> /dev/null
-install_package "Installing app Figma" brew cask install figma 2> /dev/null
-# install_package "Installing app VirtualBox" brew cask install virtualbox 2> /dev/null
-install_package "Installing app Trailer" brew cask install trailer 2> /dev/null
+install_package "Installing app Brave" brew install --cask brave-browser 2> /dev/null
+install_package "Installing app VS Code" brew install --cask visual-studio-code 2> /dev/null
+install_package "Installing app 1Password" brew install --cask 1password 2> /dev/null
+install_package "Installing app Slack" brew install --cask slack 2> /dev/null
+install_package "Installing app Sketch" brew install --cask sketch 2> /dev/null
+install_package "Installing app Figma" brew install --cask figma 2> /dev/null
+# install_package "Installing app VirtualBox" brew install --cask virtualbox 2> /dev/null
+install_package "Installing app Trailer" brew install --cask trailer 2> /dev/null
 
-install_package "Installing app qlstephen" brew cask install qlstephen 2> /dev/null
-install_package "Installing app quicklook-json" brew cask install quicklook-json 2> /dev/null
+install_package "Installing app qlstephen" brew install --cask qlstephen 2> /dev/null
+install_package "Installing app quicklook-json" brew install --cask quicklook-json 2> /dev/null
 
-install_package "Installing app The Unarchiver" brew cask install the-unarchiver 2> /dev/null
+install_package "Installing app The Unarchiver" brew install --cask the-unarchiver 2> /dev/null
 
 # Additional editors & browsers
-install_package "Installing app Sublime Text" brew cask install sublime-text 2> /dev/null
-install_package "Installing app Chrome Canary" brew cask install google-chrome-canary 2> /dev/null
-install_package "Installing app Chrome" brew cask install google-chrome 2> /dev/null
-install_package "Installing app Firefox" brew cask install firefox 2> /dev/null
-install_package "Installing app Opera" brew cask install opera 2> /dev/null
+install_package "Installing app Sublime Text" brew install --cask sublime-text 2> /dev/null
+install_package "Installing app Chrome Canary" brew install --cask google-chrome-canary 2> /dev/null
+install_package "Installing app Chrome" brew install --cask google-chrome 2> /dev/null
+install_package "Installing app Firefox" brew install --cask firefox 2> /dev/null
+install_package "Installing app Opera" brew install --cask opera 2> /dev/null
 
 # Additional software
-install_package "Installing app CleanMyMac" brew cask install cleanmymac3 2> /dev/null
-install_package "Installing app ImageOptim" brew cask install imageoptim 2> /dev/null
-install_package "Installing app ImageAlpha" brew cask install imagealpha 2> /dev/null
-install_package "Installing app Skype" brew cask install skype 2> /dev/null
+install_package "Installing app CleanMyMac" brew install --cask cleanmymac3 2> /dev/null
+install_package "Installing app ImageOptim" brew install --cask imageoptim 2> /dev/null
+install_package "Installing app ImageAlpha" brew install --cask imagealpha 2> /dev/null
+install_package "Installing app Skype" brew install --cask skype 2> /dev/null
 
 install_package "Installing app Giphy Capture" mas install 668208984
 install_package "Installing app Battery Indicator" mas install 1206020918

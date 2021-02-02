@@ -6,7 +6,6 @@
   "workbench.startupEditor": "newUntitledFile",
   "workbench.editor.tabSizing": "shrink",
   "workbench.colorTheme": "Monokai Classic",
-  "workbench.iconTheme": "Monokai Classic Icons",
   "breadcrumbs.enabled": true,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.closeOnFileDelete": false,
@@ -73,7 +72,5 @@
   "eslint.packageManager": "npm",
 
   "bracket-pair-colorizer-2.showBracketsInGutter": true,
-  "bracket-pair-colorizer-2.highlightActiveScope": true,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "editor.suggest.insertMode": "replace"
+  "bracket-pair-colorizer-2.highlightActiveScope": true
 }

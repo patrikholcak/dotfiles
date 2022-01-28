@@ -11,6 +11,7 @@
    * | ⌘ + ⇧ + [           | Toggle block comment                  |
    * | ⌘ + ⇧ + W           | Close all editors                     |
    * | ⌘ + ⇧ + C           | Close all folders in explorer         |
+   * | ⌘ + ⇧ + `           | Toggle quotes type                    |
    *
    */
   {
@@ -43,7 +44,7 @@
   {
     "key": "shift+cmd+e",
     "command": "editor.action.codeAction",
-    "args": { "kind": "refactor.extract", "preferred": true }
+    "args": { "kind": "refactor.rewrite.import" }
   },
   {
     "key": "shift+alt+[BracketLeft]",
@@ -65,6 +66,10 @@
   {
     "key": "shift+cmd+c",
     "command": "workbench.files.action.collapseExplorerFolders"
+  },
+  {
+    "key": "shift+cmd+[Backslash]",
+    "command": "editor.togglequotes"
   },
 
   /**

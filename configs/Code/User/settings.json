@@ -10,7 +10,8 @@
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.closeOnFileDelete": false,
   "explorer.confirmDragAndDrop": false,
-  "terminal.integrated.confirmOnExit": true,
+  "terminal.integrated.confirmOnExit": "hasChildProcesses",
+  "terminal.integrated.tabs.enabled": false,
   "git.autofetch": true,
 
   // = = = = = = = = = = = = = = = =  Fonts = = = = = = = = = = = = = = = =
@@ -30,6 +31,10 @@
   "editor.suggestSelection": "first",
   "editor.suggest.localityBonus": true,
   "editor.suggest.showWords": false,
+  "editor.accessibilitySupport": "off",
+  "editor.inlineSuggest.enabled": true,
+  "editor.bracketPairColorization.enabled": true,
+  "diffEditor.ignoreTrimWhitespace": false,
 
   "files.exclude": {
     "**/.git": true,
@@ -55,11 +60,16 @@
 
   // Autoformatter
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll.eslint": true
   },
   "editor.formatOnSave": true,
   // "editor.formatOnPaste": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // = = = = = = = = = = = = = = = =  Language specific = = = = = = = = = = = = = = = =
+  "javascript.inlayHints.parameterNames.enabled": "all",
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.updateImportsOnFileMove.enabled": "always",
 
   // = = = = = = = = = = = = = = = =  Extensions = = = = = = = = = = = = = = = =
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -71,6 +81,7 @@
   "eslint.alwaysShowStatus": true,
   "eslint.packageManager": "npm",
 
-  "bracket-pair-colorizer-2.showBracketsInGutter": true,
-  "bracket-pair-colorizer-2.highlightActiveScope": true
+  "github.copilot.enable": {
+    "*": true
+  }
 }

@@ -37,5 +37,6 @@ install_package "Apt Update" apt-get update
 install_package "Apt Upgrade" apt-get upgrade -y
 
 install_package "Installing Zsh" apt-get install zsh -y
+install_package "Installing Hub" apt-get install hub -y
 
 exit 0

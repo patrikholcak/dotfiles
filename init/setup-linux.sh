@@ -32,26 +32,10 @@ install_package() {
   fi
 }
 
-getLatestRelease() {
-  curl -s https://api.github.com/repos/$1/releases | grep browser_download_url | grep 'amd64' | head -n 1 | cut -d '"' -f 4
-}
-
 printf "[ \033[00;33mSystem Apps\033[0m ]\n"
-install_package "Apt Update" sudo apt-get update
-install_package "Apt Upgrade" sudo apt-get upgrade -y
+install_package "Apt Update" apt-get update
+install_package "Apt Upgrade" apt-get upgrade -y
 
-install_package "Installing Zsh" sudo apt-get install zsh -y
-install_package "Installing Python 3" sudo apt-get install python3 -y
-
-install_package "Adding latest Node ppa" curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -
-install_package "Installing Node" sudo apt-get install -y nodejs
-install_package "Aliasing Node" echo "alias node=nodejs" >> ~/.dotfiles/zsh/aliases.zsh
-
-install_package "Downloading hub" wget -qO /tmp/hub-latest.tar $(getLatestRelease "github/hub")
-install_package "Unpacking hub" tar -zxf /tmp/hub-latest.tar --xform='s|^|hub-latest/|S' -C /tmp && mv /tmp/hub-latest/**/** /tmp/hub-latest
-install_package "Installing hub" sudo prefix=$(echo $HOME)/.dotfiles bash /tmp/hub-latest/install
-
-install_package "Installing flow" npm install flow-bin -g
-install_package "Installing vtop" npm install vtop -g
+install_package "Installing Zsh" apt-get install zsh -y
 
 exit 0

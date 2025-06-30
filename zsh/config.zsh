@@ -8,6 +8,8 @@ export CLICOLOR=true
 
 export TERM="screen-256color"
 
+export DOTNET_WATCH_SUPPRESS_BROWSER_REFRESH=1
+
 fpath=($ZSH/zsh/functions $fpath)
 
 autoload -U $ZSH/zsh/functions/*(:t)

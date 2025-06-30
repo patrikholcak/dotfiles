@@ -7,6 +7,12 @@ else
   git="/usr/bin/git"
 fi
 
+check_docker() {
+  if [ -f /.dockerenv ]; then
+      echo "(docker)";
+  fi
+}
+
 git_prompt() {
   git rev-parse --is-inside-work-tree &>/dev/null || return
 
@@ -56,4 +62,4 @@ directory_name() {
   fi
 }
 
-export PROMPT=$'%{$fg[cyan]%}%n:%{$reset_color%}$(directory_name)$(git_prompt)\$ '
+export PROMPT=$'%{$fg[blue]%}$(check_docker)%{$reset_color%}%{$fg[cyan]%}%n:%{$reset_color%}$(directory_name)$(git_prompt)\$ '

@@ -6,6 +6,7 @@
   undo = !$ZSH/bin/git-undo
   promote = !$ZSH/bin/git-promote
   rank-contributers = !$ZSH/bin/git-rank-contributers
+  wd = diff --word-diff --word-diff-regex=.
   addhooks = !$ZSH/bin/git-add-hooks
   count   = !git shortlog -sn
   aa      = add --all

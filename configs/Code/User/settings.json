@@ -2,17 +2,40 @@
   // = = = = = = = = = = = = = = = =  General = = = = = = = = = = = = = = = =
   "window.openFilesInNewWindow": "off",
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
+  "breadcrumbs.enabled": true,
   "editor.multiCursorModifier": "ctrlCmd",
-  "workbench.startupEditor": "newUntitledFile",
+  "explorer.confirmDragAndDrop": false,
+  "workbench.startupEditor": "welcomePage",
   "workbench.editor.tabSizing": "shrink",
   "workbench.colorTheme": "Monokai Classic",
-  "breadcrumbs.enabled": true,
+  "workbench.iconTheme": "Monokai Classic Icons",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.closeOnFileDelete": false,
-  "explorer.confirmDragAndDrop": false,
-  "terminal.integrated.confirmOnExit": "hasChildProcesses",
+  "workbench.editorAssociations": {
+    "*.svg": "default",
+  },
   "terminal.integrated.tabs.enabled": false,
+  "terminal.integrated.shellIntegration.enabled": true,
+  "terminal.integrated.confirmOnExit": "hasChildProcesses",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.profiles.linux": {
+    "zsh": {
+      "path": "/bin/zsh",
+    },
+  },
+  "terminal.integrated.commandsToSkipShell": [
+    "-workbench.action.terminal.findNext",
+    "-search.action.focusNextSearchResult",
+    "-workbench.action.debug.start",
+  ],
+
+  // Disable annoying chat button in the header and other features
+  "chat.disableAIFeatures": true,
+
+  "git.mergeEditor": true,
   "git.autofetch": true,
+  "git.confirmSync": false,
+  "diffEditor.ignoreTrimWhitespace": true,
 
   // = = = = = = = = = = = = = = = =  Fonts = = = = = = = = = = = = = = = =
   "workbench.fontAliasing": "antialiased",
@@ -22,19 +45,23 @@
 
   // = = = = = = = = = = = = = = = =  Editor: General = = = = = = = = = = = = = = = =
   "editor.tabSize": 2,
+  "editor.useTabStops": true,
+  "editor.detectIndentation": false,
   "editor.renderWhitespace": "all",
   "editor.renderControlCharacters": true,
-  "editor.rulers": [80, 100],
+  "editor.accessibilitySupport": "off",
+  "editor.rulers": [80, 120],
   "editor.minimap.showSlider": "always",
   "editor.showFoldingControls": "always",
-  "editor.detectIndentation": false,
+  "editor.bracketPairColorization.enabled": true,
   "editor.suggestSelection": "first",
   "editor.suggest.localityBonus": true,
   "editor.suggest.showWords": false,
-  "editor.accessibilitySupport": "off",
+  "editor.snippetSuggestions": "inline",
   "editor.inlineSuggest.enabled": true,
-  "editor.bracketPairColorization.enabled": true,
-  "diffEditor.ignoreTrimWhitespace": false,
+
+  "editor.stickyScroll.enabled": true,
+  "editor.stickyScroll.maxLineCount": 5,
 
   "files.exclude": {
     "**/.git": true,
@@ -42,13 +69,13 @@
     "**/.hg": true,
     "**/CVS": true,
     "**/.DS_Store": true,
-    "**/.next": true
+    "**/.next": true,
   },
 
   "files.associations": {
     "*.js": "javascriptreact",
-    "*.css": "postcss",
-    "*.svg": "xml"
+    "*.css": "tailwindcss",
+    "*.svg": "html",
   },
 
   // = = = = = = = = = = = = = = = =  Editor: Formatting = = = = = = = = = = = = = = = =
@@ -60,28 +87,75 @@
 
   // Autoformatter
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit",
   },
   "editor.formatOnSave": true,
-  // "editor.formatOnPaste": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
 
   // = = = = = = = = = = = = = = = =  Language specific = = = = = = = = = = = = = = = =
-  "javascript.inlayHints.parameterNames.enabled": "all",
-  "typescript.inlayHints.parameterNames.enabled": "all",
-  "typescript.updateImportsOnFileMove.enabled": "always",
+  "js/ts.inlayHints.parameterNames.enabled": "none",
+  "js/ts.updateImportsOnFileMove.enabled": "always",
 
-  // = = = = = = = = = = = = = = = =  Extensions = = = = = = = = = = = = = = = =
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact"
+  "[csharp]": {
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false,
   },
 
-  "eslint.alwaysShowStatus": true,
-  "eslint.packageManager": "npm",
+  // = = = = = = = = = = = = = = = =  Extensions = = = = = = = = = = = = = = = =
+  "settingsSync.ignoredExtensions": [
+    "github.codespaces",
+    "github.remotehub",
+    "github.github-vscode-theme",
+    "ms-mssql.data-workspace-vscode",
+    "ms-mssql.sql-database-projects-vscode",
+    "GitHub.copilot-chat",
+  ],
 
-  "github.copilot.enable": {
-    "*": true
-  }
+  "dotfiles.repository": "https://github.com/patrikholcak/dotfiles-devcontainer.git",
+  "dotfiles.installCommand": "/tmp/dotfiles/install.sh",
+  "dotfiles.targetPath": "/tmp/dotfiles",
+  "remote.localPortHost": "allInterfaces",
+  "remote.autoForwardPortsSource": "hybrid",
+  "remote.SSH.enableAgentForwarding": true,
+
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typecriptreact",
+  },
+
+  "testing.automaticallyOpenTestResults": "neverOpen",
+  "jest.outputConfig": {
+    "revealOn": "demand",
+    "revealWithFocus": "none",
+    "clearOnRun": "none",
+  },
+
+  "githubPullRequests.pullBranch": "never",
+  "githubPullRequests.fileListLayout": "tree",
+  "githubPullRequests.terminalLinksHandler": "github",
+  "githubPullRequests.createOnPublishBranch": "never",
+  "githubPullRequests.queries": [
+    {
+      "label": "Local Pull Request Branches",
+      "query": "default",
+    },
+    {
+      "label": "Waiting For My Review",
+      "query": "repo:${owner}/${repository} is:open review-requested:${user}",
+    },
+    {
+      "label": "Created By Me",
+      "query": "repo:${owner}/${repository} is:open author:${user}",
+    },
+    {
+      "label": "All Open",
+      "query": "default",
+    },
+  ],
+
+  // Set claude to open in a panel
+  "claudeCode.preferredLocation": "panel",
+
+  "RadonIDE.userIntesrface.panelLocation": "side-panel",
+  "window.commandCenter": false,
 }

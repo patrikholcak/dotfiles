@@ -1,5 +1,6 @@
 {
   // = = = = = = = = = = = = = = = =  General = = = = = = = = = = = = = = = =
+  "window.commandCenter": true,
   "window.openFilesInNewWindow": "off",
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
   "breadcrumbs.enabled": true,
@@ -156,6 +157,5 @@
   // Set claude to open in a panel
   "claudeCode.preferredLocation": "panel",
 
-  "RadonIDE.userIntesrface.panelLocation": "side-panel",
-  "window.commandCenter": false,
+  "RadonIDE.userInterface.panelLocation": "side-panel",
 }

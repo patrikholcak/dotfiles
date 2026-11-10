@@ -39,7 +39,6 @@ printf "[ \033[00;33mInstalling Extensions\033[0m ]\n"
 install_extension "coenraads.bracket-pair-colorizer-2\n" coenraads.bracket-pair-colorizer-2
 install_extension "naumovs.color-highlight\n" naumovs.color-highlight
 install_extension "dbaeumer.vscode-eslint\n" dbaeumer.vscode-eslint
-install_extension "kumar-harsh.graphql-for-vscode\n" kumar-harsh.graphql-for-vscode
 install_extension "wix.vscode-import-cost\n" wix.vscode-import-cost
 install_extension "orta.vscode-jest\n" orta.vscode-jest
 install_extension "silvenon.mdx\n" silvenon.mdx

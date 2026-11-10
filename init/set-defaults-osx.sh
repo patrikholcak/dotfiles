@@ -8,10 +8,6 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Show scrollbars when scrolling
-defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
-# Possible values: `WhenScrolling`, `Automatic` and `Always`
-
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
@@ -52,13 +48,6 @@ defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
 # Disable hibernation (speeds up entering sleep mode)
 sudo pmset -a hibernatemode 0
 
-# Remove the sleep image file to save disk space
-sudo rm /private/var/vm/sleepimage
-# Create a zero-byte file instead…
-sudo touch /private/var/vm/sleepimage
-# …and make sure it can’t be rewritten
-sudo chflags uchg /private/var/vm/sleepimage
-
 # Disable the sudden motion sensor as it’s not useful for SSDs
 sudo pmset -a sms 0
 
@@ -93,6 +82,13 @@ defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+# Disable emoji substitution in messages
+defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticEmojiSubstitutionEnablediMessage" -bool false
+
+# Disable language switcher at cursor
+defaults write kCFPreferencesAnyApplication TSMLanguageIndicatorEnabled 0
+
 
 # Set language and text formats
 defaults write NSGlobalDomain AppleLanguages -array "en-GB"
@@ -192,23 +188,9 @@ defaults write com.apple.dock mru-spaces -bool false
 # Don’t show recent applications in Dock
 defaults write com.apple.dock show-recents -bool false
 
-# Add iOS & Watch Simulator to Launchpad
-sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app" "/Applications/Simulator.app"
-sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator (Watch).app" "/Applications/Simulator (Watch).app"
-
 # Enable the Develop menu in Safari
 defaults write com.apple.Safari.SandboxBroker ShowDevelopMenu -bool true
 
-
-###############################################################################
-# Mail                                                                        #
-###############################################################################
-
-# Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
-defaults read com.apple.mail AddressesIncludeNameOnPasteboard -bool false
-
-# Disable inline attachments (just show the icons)
-defaults read com.apple.mail DisableInlineAttachmentViewing -bool true
 
 ###############################################################################
 # Terminal                                                                    #
@@ -267,17 +249,6 @@ EOD
 
 
 ###############################################################################
-# Time Machine                                                                #
-###############################################################################
-
-# Prevent Time Machine from prompting to use new hard drives as backup volume
-defaults read com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
-
-# Disable local Time Machine backups
-hash tmutil &> /dev/null && sudo tmutil disablelocal
-
-
-###############################################################################
 # TextEdit, Disk Utility, and QuickTime                                       #
 ###############################################################################
 
@@ -310,26 +281,5 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 # Disable continuous spell checking
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "continuousSpellCheckingEnabled" -bool false
-
-
-###############################################################################
-# Google Chrome & Google Chrome Canary                                        #
-###############################################################################
-
-# Disable the all too sensitive backswipe on trackpads
-defaults read com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
-defaults read com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
-
-# Disable the all too sensitive backswipe on Magic Mouse
-defaults read com.google.Chrome AppleEnableMouseSwipeNavigateWithScrolls -bool false
-defaults read com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls -bool false
-
-# Use the system-native print preview dialog
-defaults read com.google.Chrome DisablePrintPreview -bool true
-defaults read com.google.Chrome.canary DisablePrintPreview -bool true
-
-# Expand the print dialog by default
-defaults read com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
-defaults read com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool true
 
 exit 0

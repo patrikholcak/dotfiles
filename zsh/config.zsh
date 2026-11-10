@@ -1,3 +1,5 @@
+export BUILDX_BAKE_ENTITLEMENTS_FS=0
+
 export EDITOR='subl'
 
 export GREP_OPTIONS="--color"
@@ -9,6 +11,11 @@ export CLICOLOR=true
 export TERM="screen-256color"
 
 export DOTNET_WATCH_SUPPRESS_BROWSER_REFRESH=1
+
+export SSH_AUTH_SOCK=~/.1password/agent.sock
+
+export JAVA_HOME="$(/usr/libexec/java_home -v 17)"
+export ANDROID_HOME="$(android info sdk)"
 
 fpath=($ZSH/zsh/functions $fpath)
 

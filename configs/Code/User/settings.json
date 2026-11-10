@@ -1,5 +1,6 @@
 {
   // = = = = = = = = = = = = = = = =  General = = = = = = = = = = = = = = = =
+  "chat.disableAIFeatures": true,
   "window.commandCenter": true,
   "window.openFilesInNewWindow": "off",
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
@@ -30,9 +31,6 @@
     "-workbench.action.debug.start",
   ],
 
-  // Disable annoying chat button in the header and other features
-  "chat.disableAIFeatures": true,
-
   "git.mergeEditor": true,
   "git.autofetch": true,
   "git.confirmSync": false,
@@ -59,7 +57,7 @@
   "editor.suggest.localityBonus": true,
   "editor.suggest.showWords": false,
   "editor.snippetSuggestions": "inline",
-  "editor.inlineSuggest.enabled": true,
+  "editor.inlineSuggest.enabled": false,
 
   "editor.stickyScroll.enabled": true,
   "editor.stickyScroll.maxLineCount": 5,
@@ -103,6 +101,8 @@
   },
 
   // = = = = = = = = = = = = = = = =  Extensions = = = = = = = = = = = = = = = =
+  "extensions.autoUpdate": "off",
+
   "settingsSync.ignoredExtensions": [
     "github.codespaces",
     "github.remotehub",
@@ -156,6 +156,4 @@
 
   // Set claude to open in a panel
   "claudeCode.preferredLocation": "panel",
-
-  "RadonIDE.userInterface.panelLocation": "side-panel",
 }

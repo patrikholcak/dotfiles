@@ -79,6 +79,7 @@
    * | ⌘ + K               | Clear terminal output                 |
    * | ⌘ + ⌃ + T           | Togle terminal window                 |
    * | ⌘ + T               | Add new terminal tab                  |
+   * | ⌘ + ⌥               | Add new local terminal tab            |
    * | ⌘ + W               | Kill terminal window                  |
    * | ⌘ + ⇧ + arrows      | Switch between active terminal window |
    * | ⌘ + ⌥ + ⇧ + arrows  | Switch between split terminal panes   |
@@ -100,6 +101,11 @@
     "when": "terminalFocus"
   },
   {
+    "key": "cmd+shift+t",
+    "command": "workbench.action.terminal.newLocal",
+    "when": "terminalFocus"
+  },
+  {
     "key": "shift+cmd+left",
     "command": "workbench.action.terminal.focusPrevious",
     "when": "terminalFocus"
@@ -110,12 +116,12 @@
     "when": "terminalFocus"
   },
   {
-    "key": "shift+alt+cmd+left",
+    "key": "shift+alt+left",
     "command": "workbench.action.terminal.focusPreviousPane",
     "when": "terminalFocus"
   },
   {
-    "key": "shift+alt+cmd+right",
+    "key": "shift+alt+right",
     "command": "workbench.action.terminal.focusNextPane",
     "when": "terminalFocus"
   },
@@ -128,5 +134,20 @@
     "key": "alt+\\",
     "command": "workbench.action.terminal.split",
     "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+j",
+    "command": "-editor.action.joinLines",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+backspace",
+    "command": "deleteWordPartLeft",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+alt+backspace",
+    "command": "-deleteWordPartLeft",
+    "when": "textInputFocus && !editorReadonly"
   }
 ]

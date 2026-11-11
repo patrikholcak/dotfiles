@@ -14,8 +14,8 @@ export DOTNET_WATCH_SUPPRESS_BROWSER_REFRESH=1
 
 export SSH_AUTH_SOCK=~/.1password/agent.sock
 
-export JAVA_HOME="$(/usr/libexec/java_home -v 17)"
-export ANDROID_HOME="$(android info sdk)"
+[ -x /usr/libexec/java_home ] && export JAVA_HOME="$(/usr/libexec/java_home -v 17)"
+command -v android >/dev/null && export ANDROID_HOME="$(android info sdk)"
 
 fpath=($ZSH/zsh/functions $fpath)
 
